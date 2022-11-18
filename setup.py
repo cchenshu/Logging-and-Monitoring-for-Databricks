@@ -1,0 +1,28 @@
+import setuptools
+
+with open("README.md", "r", encoding="utf-8") as fh:
+    long_description = fh.read()
+
+setuptools.setup(
+    name="monitor_solution",
+    version="0.0.1",
+    author="Chenshu",
+    author_email="cchenshu@outlook.com",
+    description="Monitoring and Logging for Databricks",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://github.com/cchenshu/Logging-and-Monitoring-for-Databricks.git",
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: Apache Software License",
+        "Operating System :: OS Independent",
+    ],
+    package_dir={"": "src"},
+    packages=setuptools.find_packages(where="src"),
+    python_requires=">=3.8",
+    entry_points='''
+        [console_scripts]
+        monitor=monitor_solution.monitor_runner:main
+        transform=monitor_solution.runner:main
+    ''',
+)

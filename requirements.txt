@@ -1,0 +1,5 @@
+setuptools
+wheel
+pyspark==3.3.0
+pandas==1.3.5
+delta-spark==2.1.0
